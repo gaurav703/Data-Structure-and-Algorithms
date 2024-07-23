@@ -62,6 +62,21 @@ Node *search(Node *head, int key)
     return nullptr;
 }
 
+// lenght of linked list
+
+Node *length(Node *head)
+{
+    Node *temp = head;
+    int count = 0;
+    while (temp != nullptr)
+    {
+        count++;
+        temp = temp->next;
+    }
+    cout << "Length of linked list is " << count << endl;
+    return head;
+}
+
 int main()
 {
     vector<int> v = {1, 2, 3, 4, 5};
@@ -78,6 +93,9 @@ int main()
 
     // search element in linked list
     search(head1, 3);
+
+    // length of linked list
+    length(head1);
 
     return 0;
 }
